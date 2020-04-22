@@ -4,7 +4,7 @@ from flask_cors import CORS
 
 app = Flask(__name__)
 
-cors = CORS(app, resource={r"/*":{"origins": "*"}})
+cors = CORS(app, resource={r"/*": {"origins": "*"}})
 
 devs = [
     {
@@ -38,6 +38,7 @@ devs = [
 @app.route('/')
 def index():
     return "<h1>API REST by Nelson Fernandes - Automation Testing</h1>"
+
 
 @app.route('/devs', methods=['GET'])
 def home():
