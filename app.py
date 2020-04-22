@@ -35,6 +35,10 @@ devs = [
 ]
 
 
+@app.route('/')
+def index():
+    return "<h1>API REST by Nelson Fernandes - Automation Testing</h1>"
+
 @app.route('/devs', methods=['GET'])
 def home():
     return jsonify(devs), 200
